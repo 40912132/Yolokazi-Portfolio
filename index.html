@@ -1,61 +1,116 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yolokazi Zangqa | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yolokazi Zangqa | Virtual CV</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #f4f4f4; color: #333; }
+    header { background: #0a192f; color: white; padding: 2rem; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    header h1 { font-size: 2.5rem; }
+    header p { font-size: 1rem; }
+    nav { margin-top: 1rem; }
+    nav a { margin: 0 1rem; color: #64ffda; text-decoration: none; }
+    section { padding: 4rem 2rem; max-width: 1000px; margin: auto; }
+    .section-title { font-size: 2rem; margin-bottom: 1.5rem; color: #0a192f; }
+    .skills, .projects, .timeline, .contact { margin-top: 2rem; }
+    .card { background: white; padding: 1.5rem; margin: 1rem 0; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .skills span { background: #e0f7fa; padding: 0.5rem 1rem; margin: 0.3rem; display: inline-block; border-radius: 5px; }
+    footer { text-align: center; padding: 2rem; background: #0a192f; color: white; }
+    .dark-mode-toggle { position: absolute; top: 20px; right: 20px; cursor: pointer; }
+    .dark-mode body { background: #0a192f; color: #ccd6f6; }
+    .dark-mode header, .dark-mode footer { background: #112240; }
+    .dark-mode .card { background: #233554; color: #fff; }
+  </style>
 </head>
 <body>
+  <div class="dark-mode-toggle" onclick="toggleDarkMode()">
+    <i class="fa-solid fa-circle-half-stroke"></i>
+  </div>
   <header>
     <h1>Yolokazi Zangqa</h1>
-    <p>Final-Year BSc IT Student | Aspiring Risk & IT Assurance Consultant</p>
+    <p>Final-year BSc IT student | Digital Risk & IT Assurance | Cybersecurity Enthusiast</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#resume">Resume</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
   <section id="about">
-    <h2>About Me</h2>
-    <p>I’m a passionate IT student driven by curiosity and a desire to help businesses reduce risk through technology...</p>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <p><a href="assets/Yolokazi_Zangqa_CV.pdf" target="_blank">Download My CV</a></p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><strong>ATM Simulation System:</strong> C# and SQL-based secure banking app. <a href="https://github.com/yourusername/atm-sim">View on GitHub</a></li>
-      <li><strong>Insurance DB Management:</strong> C# database for policy management. <a href="https://github.com/yourusername/insurance-db">View on GitHub</a></li>
-    </ul>
+    <h2 class="section-title">About Me</h2>
+    <div class="card">
+      <p>I am a final-year BSc Information Technology student at North-West University with a strong academic foundation in data analysis, IT assurance, software development, and network simulation. I bring hands-on project experience and leadership in collaborative environments and am passionate about system integrity, digital risk, and innovative business technologies.</p>
+    </div>
   </section>
 
   <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python, SQL, Java, C#</li>
-      <li>Database Design, Power BI, Excel</li>
-      <li>Cisco Networking, Packet Tracer</li>
-    </ul>
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="card skills">
+      <span>Python</span>
+      <span>Java</span>
+      <span>C#</span>
+      <span>SQL</span>
+      <span>Power BI</span>
+      <span>Excel</span>
+      <span>Networking (Cisco)</span>
+      <span>Packet Tracer</span>
+      <span>Git & GitHub</span>
+      <span>Jira</span>
+      <span>Linux</span>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="card">
+      <h3>ATM Simulation System</h3>
+      <p>Led a team to develop a secure ATM simulation in C# with SQL Server integration. Ensured transactional accuracy and user authentication with a focus on system integrity.</p>
+    </div>
+    <div class="card">
+      <h3>Insurance Database Management</h3>
+      <p>Developed a user-friendly relational database in C# for insurance policyholders. Implemented CRUD operations and report generation for effective data handling.</p>
+    </div>
+    <div class="card">
+      <h3>Enterprise Network Simulation</h3>
+      <p>Configured a secure enterprise network using Cisco Packet Tracer with VLANs, NAT, DHCP, and routing protocols for scalable infrastructure planning.</p>
+    </div>
+  </section>
+
+  <section id="timeline">
+    <h2 class="section-title">Education Timeline</h2>
+    <div class="card">
+      <ul>
+        <li><strong>2025 (Expected):</strong> BSc in Information Technology - North-West University</li>
+        <li><strong>2020:</strong> Grade 12 - Thubalethu High School, Eastern Cape</li>
+      </ul>
+    </div>
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: yolokazizangqa96@gmail.com</p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/yolokazi" target="_blank">linkedin.com/in/yolokazi</a></p>
-    <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a></p>
+    <h2 class="section-title">Contact Me</h2>
+    <div class="card">
+      <p><i class="fa-solid fa-envelope"></i> yolokazizangqa96@gmail.com</p>
+      <p><i class="fa-solid fa-phone"></i> 063 943 8696</p>
+      <p><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/yolokazi" target="_blank">LinkedIn</a></p>
+      <p><i class="fa-brands fa-github"></i> <a href="https://github.com/40912132" target="_blank">GitHub</a></p>
+      <p><i class="fa-solid fa-globe"></i> <a href="https://github.com/40912132/Yolokazi-Portfolio" target="_blank">Virtual CV Repo</a></p>
+      <p><i class="fa-solid fa-download"></i> <a href="CV.pdf" target="_blank">Download My PDF CV</a></p>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Yolokazi Zangqa</p>
+    <p>&copy; 2025 Yolokazi Zangqa. All rights reserved.</p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
